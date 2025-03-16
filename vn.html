@@ -9,39 +9,49 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <link href="assets/img/logo.png" rel="icon">
-  <link href="assets/img/logo.png" rel="apple-touch-icon">
+  <link href="assets/img/logo.png" rel="icon" type="image/png">
+  <link href="assets/img/logo.png" rel="apple-touch-icon" type="image/png">
 
   <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Optimized Google Fonts loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap&family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet"
         media="print"
         onload="this.media='all'">
 
-  <!-- Fallback for no-JS -->
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-          rel="stylesheet">
-  </noscript>
+        <style>
+          /* Critical styles that prevent layout shift */
+          body {
+            margin: 0;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+          }
+          /* Add other critical styles here */
+        </style>
 
-  <!-- Defer non-critical CSS -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="assets/css/style.css" rel="stylesheet" media="print" onload="this.media='all'">
+        <!-- Primary CSS files loaded normally -->
+        <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- Critical CSS -->
-  <style>
-    /* Add critical above-the-fold styles here */
-    body { margin: 0; font-family: 'Open Sans', sans-serif; }
-  </style>
+        <!-- Non-critical CSS loaded asynchronously -->
+        <link rel="preload" href="assets/vendor/aos/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="assets/vendor/boxicons/css/boxicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="assets/vendor/glightbox/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+        <!-- Fallback for no JavaScript -->
+        <noscript>
+          <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+          <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+          <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
+          <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
+          <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+        </noscript>
 </head>
 
 <body>
@@ -51,7 +61,7 @@
   <header id="header">
     <div class="d-flex flex-column">
       <div class="profile">
-        <img src="assets/img/profile-img.jpeg" alt="" class="img-fluid rounded-circle">
+        <img src="assets/img/profile-img.jpeg" alt="Profile" width="120" height="120" class="img-fluid rounded-circle" fetchpriority="high">
 
         <h1 class="text-light"><a href="vn.html">Nguyễn Đôn Đổng</a></h1>
         <div class="social-links mt-3 text-center">
@@ -112,7 +122,7 @@
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>15 Feb 1997</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.dondong.io.vn</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>(+84) 0987-899-375</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>(+84) 987-899-375</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Hồ Chí Minh, Việt Nam</span></li>
                 </ul>
               </div>
@@ -201,7 +211,7 @@
           <div class="col-lg-6" data-aos="fade-up">
 
             <div class="progress">
-              <span class="skill">Frontend <i class="val"></i></span>
+              <span class="skill">DevOps <i class="val"></i></span>
               <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -269,7 +279,7 @@
               <h4>Nguyễn Đôn Đổng</h4>
               <ul>
                 <li>Bình Thạnh, Hồ Chí Minh, Việt Nam</li>
-                <li>(+84) 0987-899-375</li>
+                <li>(+84) 987-899-375</li>
                 <li>nguyendondong.dev@gmail.com</li>
                 <li>Ruby On Rails - NestJs</li>
               </ul>
@@ -481,13 +491,13 @@
     <section id="downloadCv" class="text-center">
       <div class="container">
         <p>Click để tải về CV của tôi:</p>
-        <a href="assets/img/cv/EL-Resume.pdf" download="CV-English">
+        <a href="https://www.topcv.vn/xem-cv/VgoEAAdUXAhbA1FRDwNbX1FcBwYEVwACCVcCAg1b22" download="CV-English">
           <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
             <path fill="currentColor" d="m12 15.577l-3.539-3.538l.708-.72L11.5 13.65V5h1v8.65l2.33-2.33l.709.719zM5 19v-4.038h1V18h12v-3.038h1V19z" />
           </svg>
           CV English
         </a>
-        <a href="assets/img/cv/VN-Resume.pdf" download="CV-Vietnamese" class="p-2">
+        <a href="https://www.topcv.vn/xem-cv/AFddB1IEVV5XBFhQBltVBVQLA1IAUFEDBAdaUA0c59" download="CV-Vietnamese" class="p-2">
           <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
             <path fill="currentColor" d="m12 15.577l-3.539-3.538l.708-.72L11.5 13.65V5h1v8.65l2.33-2.33l.709.719zM5 19v-4.038h1V18h12v-3.038h1V19z" />
           </svg>
@@ -598,16 +608,21 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <!-- Preload critical scripts -->
+  <link rel="preload" href="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
+  <link rel="preload" href="assets/js/main.js" as="script">
 
-  <script src="assets/js/main.js"></script>
+  <!-- Defer non-critical scripts -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
+  <script src="assets/vendor/aos/aos.js" defer></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="assets/vendor/typed.js/typed.umd.js" defer></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js" defer></script>
+
+  <script src="assets/js/main.js" defer></script>
   <!-- Optimize JavaScript loading -->
   <script>
     // Defer non-critical JavaScript
@@ -622,10 +637,17 @@
       });
     }
 
-    // Load scripts after page load
+    // Load non-critical scripts after page load
     window.addEventListener('load', function() {
+      // Load additional scripts if needed
       loadScript('assets/vendor/bootstrap/js/bootstrap.bundle.js');
-      // Add other script loads here
+      loadScript('assets/vendor/purecounter/purecounter_vanilla.js');
+      loadScript('assets/vendor/aos/aos.js');
+      loadScript('assets/vendor/glightbox/js/glightbox.min.js');
+      loadScript('assets/vendor/isotope-layout/isotope.pkgd.min.js');
+      loadScript('assets/vendor/swiper/swiper-bundle.min.js');
+      loadScript('assets/vendor/typed.js/typed.umd.js');
+      loadScript('assets/vendor/waypoints/noframework.waypoints.js');
     });
   </script>
 
