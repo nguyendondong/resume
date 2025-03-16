@@ -22,30 +22,36 @@
         media="print"
         onload="this.media='all'">
 
-  <!-- Defer non-critical CSS -->
-  <link rel="stylesheet" href="assets/vendor/aos/aos.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'">
+        <style>
+          /* Critical styles that prevent layout shift */
+          body {
+            margin: 0;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+          }
+          /* Add other critical styles here */
+        </style>
 
-  <!-- Fallback for no-JS -->
-  <noscript>
-    <link rel="stylesheet" href="assets/vendor/aos/aos.css">
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
-    <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
-    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-  </noscript>
-    <!-- Critical CSS -->
-    <style>
-      /* Add critical above-the-fold styles here */
-      body { margin: 0; font-family: 'Open Sans', sans-serif; }
-    </style>
+        <!-- Primary CSS files loaded normally -->
+        <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Non-critical CSS loaded asynchronously -->
+        <link rel="preload" href="assets/vendor/aos/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="assets/vendor/boxicons/css/boxicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="assets/vendor/glightbox/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+        <!-- Fallback for no JavaScript -->
+        <noscript>
+          <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+          <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+          <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
+          <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
+          <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+        </noscript>
 </head>
 
 <body>
@@ -225,7 +231,7 @@
         <div class="section-title">
           <h2>Skills</h2>
           <p><i class="bi bi-chevron-right"></i>I have experience in application development as a
-            Backend Engineer, primarily utilizing Ruby on Rails. Additionally, I have  experience with NestJs
+            Backend Engineer, primarily utilizing Ruby on Rails. Additionally, I have experience with NestJs
             in outsourced projects.</p>
           <p><i class="bi bi-chevron-right"></i> I have the ability to quickly adapt and learn new languages to meet the
             needs of different projects.</p>
